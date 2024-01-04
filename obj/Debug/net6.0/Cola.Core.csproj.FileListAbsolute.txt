@@ -10,6 +10,7 @@
 /Users/dinya/github/OdinCola/Cola.Solution/Cola.Core/obj/Debug/net6.0/refint/Cola.Core.dll
 /Users/dinya/github/OdinCola/Cola.Solution/Cola.Core/obj/Debug/net6.0/Cola.Core.pdb
 /Users/dinya/github/OdinCola/Cola.Solution/Cola.Core/obj/Debug/net6.0/ref/Cola.Core.dll
+<<<<<<< HEAD
 E:\github\Cola\ColaFramework\Cola.Core\bin\Debug\net6.0\Cola.Core.deps.json
 E:\github\Cola\ColaFramework\Cola.Core\bin\Debug\net6.0\Cola.Core.dll
 E:\github\Cola\ColaFramework\Cola.Core\bin\Debug\net6.0\Cola.Core.pdb
@@ -22,3 +23,5 @@ E:\github\Cola\ColaFramework\Cola.Core\obj\Debug\net6.0\Cola.Core.dll
 E:\github\Cola\ColaFramework\Cola.Core\obj\Debug\net6.0\refint\Cola.Core.dll
 E:\github\Cola\ColaFramework\Cola.Core\obj\Debug\net6.0\Cola.Core.pdb
 E:\github\Cola\ColaFramework\Cola.Core\obj\Debug\net6.0\ref\Cola.Core.dll
+=======
+>>>>>>> 41815c4f643af750123a3297d3e0d762e2c9469c
