@@ -15,6 +15,7 @@
         <PackageTags>Cola;net core</PackageTags>
         <AssemblyVersion>1.0.2</AssemblyVersion>
         <FileVersion>1.0.2</FileVersion>
+        <PackageReadmeFile>./readme.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -27,6 +28,15 @@
       <PackageReference Include="SqlSugarCore" Version="5.1.4.60" />
     </ItemGroup>
 
+    <ItemGroup>
+        <None Include="icon.png"  Pack="true" PackagePath="\" />
+        <EmbeddedResource Include="icon.png">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="readme.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
     <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
       <Exec Command="dotnet restore" />
     </Target>
