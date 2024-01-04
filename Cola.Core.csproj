@@ -4,6 +4,17 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <Version>1.0.2</Version>
+        <Title>Cola.Core</Title>
+        <Authors>OdinSam</Authors>
+        <Description>Cola 框架核心组件</Description>
+        <Copyright>copyRight © 2023 OdinSam</Copyright>
+        <PackageProjectUrl>https://github.com/odinGitGmail/Cola.Core</PackageProjectUrl>
+        <PackageIcon>icon.png</PackageIcon>
+        <RepositoryUrl>https://github.com/odinGitGmail/Cola.Core</RepositoryUrl>
+        <PackageTags>Cola;net core</PackageTags>
+        <AssemblyVersion>1.0.2</AssemblyVersion>
+        <FileVersion>1.0.2</FileVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -15,5 +26,9 @@
       <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
       <PackageReference Include="SqlSugarCore" Version="5.1.4.60" />
     </ItemGroup>
+
+    <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+      <Exec Command="dotnet restore" />
+    </Target>
 
 </Project>
