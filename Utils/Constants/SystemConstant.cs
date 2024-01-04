@@ -68,7 +68,6 @@ public class SystemConstant
     #region Log配置
 
     public const string CONSTANT_COLALOGS_SECTION = "ColaLogs";
-    
     public const string CONSTANT_LOGUTIL_NAMESPACE = "Cola.Core.ColaLog.LogUtils"; 
 
     #endregion
