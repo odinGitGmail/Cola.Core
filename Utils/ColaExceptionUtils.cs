@@ -1,5 +1,5 @@
-﻿using Cola.Core.Utils.Enums;
-using Cola.Core.Utils.Extensions;
+﻿using Cola.CoreUtils.Enums;
+using Cola.CoreUtils.Extensions;
 
 namespace Cola.Core.Utils;
 

@@ -3,6 +3,7 @@ using Cola.Core.Models.ColaSnowFlake;
 using Cola.Core.Utils;
 using Cola.Core.Utils.Constants;
 using Cola.Core.Utils.Enums;
+using Cola.CoreUtils.Enums;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 

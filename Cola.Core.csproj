@@ -4,7 +4,7 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <Version>1.0.2</Version>
+        <Version>1.0.3</Version>
         <Title>Cola.Core</Title>
         <Authors>OdinSam</Authors>
         <Description>Cola 框架核心组件</Description>
@@ -13,8 +13,8 @@
         <PackageIcon>icon.png</PackageIcon>
         <RepositoryUrl>https://github.com/odinGitGmail/Cola.Core</RepositoryUrl>
         <PackageTags>Cola;net core</PackageTags>
-        <AssemblyVersion>1.0.2</AssemblyVersion>
-        <FileVersion>1.0.2</FileVersion>
+        <AssemblyVersion>1.0.3</AssemblyVersion>
+        <FileVersion>1.0.3</FileVersion>
         <PackageReadmeFile>./readme.md</PackageReadmeFile>
     </PropertyGroup>
 
@@ -36,6 +36,9 @@
     </ItemGroup>
     <ItemGroup>
         <None Include="readme.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Cola.CoreUtils\Cola.CoreUtils.csproj" />
     </ItemGroup>
     <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
       <Exec Command="dotnet restore" />

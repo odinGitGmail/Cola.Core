@@ -1,8 +1,7 @@
 ﻿using System.Text;
 using Cola.Core.Models.ColaEnums.Logs;
 using Cola.Core.Models.ColaLog;
-using Cola.Core.Utils.Extensions;
-using Cola.Core.Utils.Helper;
+using Cola.CoreUtils.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using SqlSugar;
@@ -144,7 +143,7 @@ public abstract class AbsColaLogFace : IColaLogFace
         foreach (var directory in Directory.GetDirectories(levelDirPath))
             if (!directory.StringIsNullOrEmpty())
             {
-                var dirName = directory.Split(FileHelper.DirectorySeparatorChar).Last();
+                var dirName = directory.Split(Cola.CoreUtils.Helper.FileHelper.DirectorySeparatorChar).Last();
                 var dtNow = DateTime.Now;
                 var dtDir = new DateTime(dirName.Split('-')[0].ToInt(), dirName.Split('-')[1].ToInt(),
                     dirName.Split('-')[2].ToInt());

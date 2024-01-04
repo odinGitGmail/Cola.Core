@@ -3,7 +3,7 @@ using Cola.Core.ColaConsole;
 using Cola.Core.ColaSnowFlake;
 using Cola.Core.Models.ColaEnums.Logs;
 using Cola.Core.Models.ColaLog;
-using Cola.Core.Utils.Extensions;
+using Cola.CoreUtils.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 

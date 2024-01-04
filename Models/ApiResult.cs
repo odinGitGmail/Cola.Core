@@ -1,6 +1,7 @@
 ﻿using Cola.Core.Models.ColaJwt;
 using Cola.Core.Utils;
 using Cola.Core.Utils.Enums;
+using Cola.CoreUtils.Enums;
 
 namespace Cola.Core.Models;
 
