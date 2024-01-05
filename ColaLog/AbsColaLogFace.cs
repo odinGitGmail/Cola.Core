@@ -145,8 +145,8 @@ public abstract class AbsColaLogFace : IColaLogFace
             {
                 var dirName = directory.Split(Cola.CoreUtils.Helper.FileHelper.DirectorySeparatorChar).Last();
                 var dtNow = DateTime.Now;
-                var dtDir = new DateTime(dirName.Split('-')[0].ToInt(), dirName.Split('-')[1].ToInt(),
-                    dirName.Split('-')[2].ToInt());
+                var dtDir = new DateTime(dirName.Split('-')[0].StringToInt(), dirName.Split('-')[1].StringToInt(),
+                    dirName.Split('-')[2].StringToInt());
                 if ((dtNow - dtDir).TotalDays > Config!.KeepTime)
                 {
                     foreach (var exceedFile in Directory.GetFiles(directory)) File.Delete(exceedFile);
