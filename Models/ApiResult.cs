@@ -57,5 +57,5 @@ public class ApiResult
     /// </summary>
     public System.Exception? Error { get; set; }
 
-    public AccessToken Token { get; set; }
+    public AccessToken? Token { get; set; }
 }

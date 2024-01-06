@@ -97,5 +97,17 @@ public class SystemConstant
 
     #endregion
 
+    #region Swagger配置
+
+    public const string CONSTANT_COLASWAGGER_SECTION = "ColaSwagger";
+
+    #endregion
+    
+    #region IpRateLimit 配置
+
+    public const string CONSTANT_COLAIPRATELIMIT_SECTION = "ColaIpRateLimit";
+
+    #endregion
+
     #endregion
 }
