@@ -91,6 +91,8 @@ public class SystemConstant
 
     #endregion"
 
+    #region 中间件 注入组件配置
+
     #region Jwt 配置
 
     public const string CONSTANT_COLAJWT_SECTION = "ColaJwt";
@@ -108,6 +110,15 @@ public class SystemConstant
     public const string CONSTANT_COLAIPRATELIMIT_SECTION = "ColaIpRateLimit";
 
     #endregion
+    
+    #region IpRateLimit 配置
+
+    public const string CONSTANT_COLAVERSIONING_SECTION = "ColaVersioning";
+
+    #endregion
+
+    #endregion
+    
 
     #endregion
 }
