@@ -1,8 +1,10 @@
 ﻿namespace Cola.Core.Models.ColaJwt;
 public class ColaJwtOption
 {
-    public string Secret { get; set; } = "Cola.Jwt.Secret";
-    public string IsUser { get; set; } = "www.odinsam.com";
+    public string SecretKey { get; set; } = "Cola.Jwt.Secret";
+    
+    public string IssUser { get; set; } = "www.odinsam.com";
+    
     public string Audience { get; set; } = "odinsam";
     public int AccessExpiration { get; set; } = 30;
     public int RefreshExpiration { get; set; } = 1440;

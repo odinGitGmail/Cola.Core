@@ -58,4 +58,9 @@ public class ApiResult
     public System.Exception? Error { get; set; }
 
     public AccessToken? Token { get; set; }
+
+    public void Fail(string errorMessage)
+    {
+        
+    }
 }

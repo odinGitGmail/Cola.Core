@@ -1,4 +1,6 @@
-﻿namespace Cola.Core.Models.ColaJwt;
+﻿using Cola.CoreUtils.Extensions;
+
+namespace Cola.Core.Models.ColaJwt;
 public class RefreshToken
 {
     public string TokenId { get; set; }
@@ -17,17 +19,17 @@ public class RefreshToken
     /// </summary>
     public bool Invalidated { get; set; } = false;
 
-    public DateTime CreationTime { get; set; }
+    public long CreationTime { get; set; }
 
     /// <summary>
     /// 过期时间
     /// </summary>
-    public DateTime ExpiryTime { get; set; }
+    public long ExpiryTime { get; set; }
 
     /// <summary>
     /// 是否续约 达到续约时限则为true，否则为false
     /// </summary>
     /// <param name="renewalExpir">续约时限</param>
     /// <returns></returns>
-    public bool IsRenewal(int renewalExpir) => (ExpiryTime - DateTime.Now).TotalMinutes < renewalExpir;
+    public bool IsRenewal(int renewalExpir) => (ExpiryTime.LongToDateTime() - DateTime.Now).TotalMinutes < renewalExpir;
 }
