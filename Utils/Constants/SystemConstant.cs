@@ -89,7 +89,13 @@ public class SystemConstant
 
     public const string CONSTANT_COLAORM_SECTION = "ColaOrm";
 
-    #endregion"
+    #endregion
+    
+    #region MongoDb 配置
+
+    public const string CONSTANT_COLAMONGODB_SECTION = "ColaMongoDB";
+
+    #endregion
 
     #region 中间件 注入组件配置
 
