@@ -1,6 +1,7 @@
 ﻿using Cola.Core.ColaConsole;
 using Cola.Core.Models.ColaLog;
 using Cola.Core.Utils.Constants;
+using Cola.CoreUtils.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -15,7 +16,7 @@ public static class ColaLogInject
         this IServiceCollection services,
         IConfiguration config)
     {
-        var logConfig = config.GetSection(SystemConstant.CONSTANT_COLALOGS_SECTION).Get<LogConfig>();
+        var logConfig = config.GetColaSection<LogConfig>(SystemConstant.CONSTANT_COLALOGS_SECTION);
         logConfig = logConfig ?? new LogConfig();
         var opts = new LogConfigOption { Config = logConfig };
         services.AddSingleton<IColaLogs>(provider => new ColaLogs(opts, services));
@@ -38,7 +39,7 @@ public static class ColaLogInject
         this IServiceCollection services,
         IConfiguration config)
     {
-        var logConfig = config.GetSection(SystemConstant.CONSTANT_COLALOGS_SECTION).Get<LogConfig>();
+        var logConfig = config.GetColaSection<LogConfig>(SystemConstant.CONSTANT_COLALOGS_SECTION);
         var opts = new LogConfigOption { Config = logConfig };
         services.AddTransient<IColaLogs>(provider => new ColaLogs(opts, services));
         ConsoleHelper.WriteInfo("注入类型【 IColaLogs, ColaLogs 】");
@@ -60,7 +61,7 @@ public static class ColaLogInject
         this IServiceCollection services,
         IConfiguration config)
     {
-        var logConfig = config.GetSection(SystemConstant.CONSTANT_COLALOGS_SECTION).Get<LogConfig>();
+        var logConfig = config.GetColaSection<LogConfig>(SystemConstant.CONSTANT_COLALOGS_SECTION);
         var opts = new LogConfigOption { Config = logConfig };
         services.AddScoped<IColaLogs>(provider => new ColaLogs(opts, services));
         ConsoleHelper.WriteInfo("注入类型【 IColaLogs, ColaLogs 】");

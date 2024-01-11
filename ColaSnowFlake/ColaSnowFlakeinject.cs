@@ -4,6 +4,7 @@ using Cola.Core.Utils;
 using Cola.Core.Utils.Constants;
 using Cola.Core.Utils.Enums;
 using Cola.CoreUtils.Enums;
+using Cola.CoreUtils.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -47,7 +48,7 @@ public  static class ColaSnowFlakeinject
         IConfiguration config)
     {
         ConsoleHelper.WriteInfo("注入【 SnowFlake 】");
-        var snowFlakeConfig = config.GetSection(SystemConstant.CONSTANT_COLASNOWFLAKE_SECTION).Get<SnowFlakeConfig>();
+        var snowFlakeConfig = config.GetColaSection<SnowFlakeConfig>(SystemConstant.CONSTANT_COLASNOWFLAKE_SECTION);
         snowFlakeConfig = snowFlakeConfig ?? new SnowFlakeConfig();
         return services.AddSingleton<IColaSnowFlake>(provider => new ColaSnowFlake(new SnowFlakeModel()
         {

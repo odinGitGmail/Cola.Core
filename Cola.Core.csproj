@@ -19,13 +19,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Mapster" Version="7.4.0" />
-      <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
-      <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
-      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
-      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
-      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-      <PackageReference Include="SqlSugarCore" Version="5.1.4.60" />
+        <PackageReference Include="Mapster" Version="7.4.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+        <PackageReference Include="SqlSugarCore" Version="5.1.4.60" />
     </ItemGroup>
 
     <ItemGroup>
@@ -39,6 +39,21 @@
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\Cola.CoreUtils\Cola.CoreUtils.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+      <Reference Include="Microsoft.AspNetCore">
+        <HintPath>C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.21\Microsoft.AspNetCore.dll</HintPath>
+      </Reference>
+      <Reference Include="Microsoft.AspNetCore.Hosting" />
+      <Reference Include="Microsoft.Extensions.Configuration.Abstractions">
+        <HintPath>C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.21\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+      </Reference>
+      <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+        <HintPath>C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.21\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+      </Reference>
+      <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+        <HintPath>C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.21\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
 </Project>

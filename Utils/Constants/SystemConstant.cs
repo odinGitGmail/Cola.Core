@@ -122,6 +122,12 @@ public class SystemConstant
     public const string CONSTANT_COLAVERSIONING_SECTION = "ColaVersioning";
 
     #endregion
+    
+    #region ColaCore 配置
+
+    public const string CONSTANT_COLACORS_SECTION = "ColaCors";
+
+    #endregion
 
     #endregion
     
