@@ -1,6 +1,6 @@
 ﻿namespace Cola.Core.Models.SystemBuilder;
 
-public class ColaCorsOptions
+public class ColaCorsOption
 {
-    public CorsOptions Cors { get; set; }
+    public List<CorsOptions> Cors { get; set; }
 }
