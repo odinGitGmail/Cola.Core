@@ -8,15 +8,16 @@ public interface IColaException
     /// <param name="i"></param>
     /// <param name="errorMessage"></param>
     /// <returns></returns>
-    System.Exception? ThrowGreaterThanZero(int i, string errorMessage);
-    
+    Exception? ThrowGreaterThanZero(int i, string errorMessage);
+
     /// <summary>
     /// object is null
     /// </summary>
     /// <param name="obj"></param>
+    /// <param name="errorMessage"></param>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
-    System.Exception? ThrowIfNull<T>(T obj);
+    Exception? ThrowIfNull<T>(T obj, string errorMessage);
     
     /// <summary>
     /// throw String Is NullOrEmpty
@@ -24,19 +25,19 @@ public interface IColaException
     /// <param name="str"></param>
     /// <param name="exMessage"></param>
     /// <returns></returns>
-    System.Exception? ThrowStringIsNullOrEmpty(string str, string exMessage);
+    Exception? ThrowStringIsNullOrEmpty(string str, string exMessage);
     
     /// <summary>
     /// Throw Exception
     /// </summary>
     /// <param name="str"></param>
     /// <returns></returns>
-    System.Exception ThrowException(string str);
+    Exception ThrowException(string str);
     
     /// <summary>
     /// Throw Exception
     /// </summary>
     /// <param name="ex"></param>
     /// <returns></returns>
-    System.Exception ThrowException(System.Exception ex);
+    Exception ThrowException(Exception ex);
 }
