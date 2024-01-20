@@ -1,66 +1,35 @@
 ﻿using Cola.Core.Models.ColaJwt;
-using Cola.Core.Utils;
-using Cola.Core.Utils.Enums;
-using Cola.CoreUtils.Enums;
+using Newtonsoft.Json;
 
 namespace Cola.Core.Models;
 
 /// <summary>
 ///     方法返回类型
 /// </summary>
-public class ApiResult
+/// <typeparam name="T">Data 泛型类型</typeparam>
+public class ApiResult<T>
 {
     /// <summary>
-    ///     方法返回结果标识
+    /// 错误码，0代表执行成功，非0代表执行失败的某一种情况
     /// </summary>
-    private int _code;
-
-    public ApiResult(object? data = null, string? message = null,
-        EnumResult enumResult = EnumResult.Success,
-        System.Exception? error = null)
-    {
-        Data = data;
-        Message = message;
-        Code = (int)enumResult;
-        Error = error;
-    }
-
+    [JsonProperty("code")]
+    public int Code { get; set; }
+    
     /// <summary>
-    ///     方法返回数据
+    /// 错误码提示信息，执行成功为”success”
     /// </summary>
-    public object? Data { get; set; }
-
+    [JsonProperty("message")]
+    public string Message { get; set; }
+    
     /// <summary>
-    ///     方法返回信息
+    /// 返回数据，执行失败时为详细出错信息
     /// </summary>
-    public string? Message { get; set; }
-
-    public int Code
-    {
-        get => _code;
-        set
-        {
-            try
-            {
-                var result = (EnumResult)value;
-                _code = value;
-            }
-            catch
-            {
-                throw new ColaExceptionUtils(EnumException.ParamOutOfRang);
-            }
-        }
-    }
-
+    [JsonProperty("data")]
+    public T Data { get; set; }
+    
     /// <summary>
-    ///     返回异常对象
+    /// Token
     /// </summary>
-    public System.Exception? Error { get; set; }
-
+    [JsonProperty("token")]
     public AccessToken? Token { get; set; }
-
-    public void Fail(string errorMessage)
-    {
-        
-    }
 }

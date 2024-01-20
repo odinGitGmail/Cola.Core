@@ -1,8 +1,8 @@
 using Cola.Core.ColaConsole;
 using Cola.Core.Models.ColaSnowFlake;
 using Cola.Core.Utils;
-using Cola.Core.Utils.Constants;
 using Cola.Core.Utils.Enums;
+using Cola.CoreUtils.Constants;
 using Cola.CoreUtils.Enums;
 using Cola.CoreUtils.Extensions;
 using Microsoft.Extensions.Configuration;

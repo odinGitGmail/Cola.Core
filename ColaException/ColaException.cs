@@ -6,13 +6,6 @@ namespace Cola.Core.ColaException;
 
 public class ColaException : IColaException
 {
-    private readonly IColaLogs? _colaLog;
-
-    public ColaException(IColaLogs log)
-    {
-        _colaLog = log;
-    }
-
     /// <summary>
     /// throw number>0
     /// </summary>
@@ -60,10 +53,7 @@ public class ColaException : IColaException
     public System.Exception ThrowException(string str)
     {
         var ex = new System.Exception(str);
-        if (_colaLog != null)
-            _colaLog!.Error(ex);
-        else
-            ConsoleHelper.WriteException((System.Exception)ex);
+        ConsoleHelper.WriteException((System.Exception)ex);
         return ex;
     }
 
@@ -74,10 +64,7 @@ public class ColaException : IColaException
     /// <returns></returns>
     public System.Exception ThrowException(System.Exception ex)
     {
-        if (_colaLog != null)
-            _colaLog!.Error(ex);
-        else
-            ConsoleHelper.WriteException((System.Exception)ex);
+        ConsoleHelper.WriteException((System.Exception)ex);
         return ex;
     }
 }

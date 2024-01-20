@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using Cola.Core.Models.ColaEnums.Logs;
 using Cola.Core.Models.ColaLog;
-using Cola.Core.Utils.Constants;
+using Cola.CoreUtils.Constants;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Cola.Core.ColaLog;
