@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Cola.Core.Models.ColaNacos;
+namespace Cola.Core.Models.ColaNacos.Namespace;
 
 public class NacosNamespaceInfo : NacosNamespaceLst
 {

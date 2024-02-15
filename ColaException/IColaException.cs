@@ -1,4 +1,6 @@
-﻿namespace Cola.Core.ColaException;
+﻿using Cola.CoreUtils.Enums;
+
+namespace Cola.Core.ColaException;
 
 public interface IColaException
 {
@@ -6,33 +8,33 @@ public interface IColaException
     /// throw number>0
     /// </summary>
     /// <param name="i"></param>
-    /// <param name="errorMessage"></param>
+    /// <param name="enumException"></param>
     /// <returns></returns>
-    Exception? ThrowGreaterThanZero(int i, string errorMessage);
+    public Exception? ThrowGreaterThanZero(int i, EnumException enumException);
 
     /// <summary>
     /// object is null
     /// </summary>
     /// <param name="obj"></param>
-    /// <param name="errorMessage"></param>
+    /// <param name="enumException"></param>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
-    Exception? ThrowIfNull<T>(T obj, string errorMessage);
+    Exception? ThrowIfNull<T>(T obj, EnumException enumException);
     
     /// <summary>
     /// throw String Is NullOrEmpty
     /// </summary>
     /// <param name="str"></param>
-    /// <param name="exMessage"></param>
+    /// <param name="enumException"></param>
     /// <returns></returns>
-    Exception? ThrowStringIsNullOrEmpty(string str, string exMessage);
+    Exception? ThrowStringIsNullOrEmpty(string str, EnumException enumException);
     
     /// <summary>
     /// Throw Exception
     /// </summary>
-    /// <param name="str"></param>
+    /// <param name="enumException"></param>
     /// <returns></returns>
-    Exception ThrowException(string str);
+    Exception ThrowException(EnumException enumException);
     
     /// <summary>
     /// Throw Exception
@@ -40,4 +42,11 @@ public interface IColaException
     /// <param name="ex"></param>
     /// <returns></returns>
     Exception ThrowException(Exception ex);
+    
+    /// <summary>
+    /// Throw Exception
+    /// </summary>
+    /// <param name="exStr"></param>
+    /// <returns></returns>
+    Exception ThrowException(string exStr);
 }

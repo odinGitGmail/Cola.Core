@@ -1,5 +1,6 @@
 ﻿using Cola.Core.ColaConsole;
-using Cola.Core.ColaLog;
+using Cola.CoreUtils.Enums;
+using Cola.CoreUtils.Extensions;
 
 namespace Cola.Core.ColaException;
 
@@ -10,12 +11,12 @@ public class ColaException : IColaException
     /// throw number>0
     /// </summary>
     /// <param name="i"></param>
-    /// <param name="errorMessage"></param>
+    /// <param name="enumException"></param>
     /// <returns></returns>
-    public Exception? ThrowGreaterThanZero(int i, string errorMessage)
+    public Exception? ThrowGreaterThanZero(int i, EnumException enumException)
     {
         if (i > 0)
-            return ThrowException(errorMessage);
+            return ThrowException(enumException);
         return null;
     }
 
@@ -23,14 +24,14 @@ public class ColaException : IColaException
     /// object is null
     /// </summary>
     /// <param name="obj"></param>
-    /// <param name="errorMessage"></param>
+    /// <param name="enumException"></param>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
-    public Exception? ThrowIfNull<T>(T obj, string errorMessage)
+    public Exception? ThrowIfNull<T>(T obj, EnumException enumException)
     {
         if (obj == null)
         {
-            ThrowException($"{typeof(T).FullName} {errorMessage}");
+            ThrowException(enumException);
         }
 
         return null;
@@ -40,23 +41,23 @@ public class ColaException : IColaException
     /// throw String Is NullOrEmpty
     /// </summary>
     /// <param name="str"></param>
-    /// <param name="exMessage"></param>
+    /// <param name="enumException"></param>
     /// <returns></returns>
-    public Exception? ThrowStringIsNullOrEmpty(string str, string exMessage)
+    public Exception? ThrowStringIsNullOrEmpty(string str, EnumException enumException)
     {
-        if (string.IsNullOrEmpty(str))
-            return ThrowException($"{exMessage}");
+        if (str.StringIsNullOrEmpty())
+            return ThrowException(enumException);
         return null;
     }
 
     /// <summary>
     /// Throw Exception
     /// </summary>
-    /// <param name="str"></param>
+    /// <param name="enumException"></param>
     /// <returns></returns>
-    public Exception ThrowException(string str)
+    public Exception ThrowException(EnumException enumException)
     {
-        var ex = new Exception(str);
+        var ex = new Exception(enumException.GetDescription());
         ConsoleHelper.WriteException(ex);
         return ex;
     }
@@ -68,6 +69,13 @@ public class ColaException : IColaException
     /// <returns></returns>
     public Exception ThrowException(Exception ex)
     {
+        ConsoleHelper.WriteException(ex);
+        return ex;
+    }
+
+    public Exception ThrowException(string exStr)
+    {
+        var ex = new Exception(exStr);
         ConsoleHelper.WriteException(ex);
         return ex;
     }
