@@ -13,19 +13,19 @@ public class ApiResult<T>
     /// 错误码，0代表执行成功，非0代表执行失败的某一种情况
     /// </summary>
     [JsonProperty("code")]
-    public int Code { get; set; }
+    public int Code { get; set; } = 0;
     
     /// <summary>
-    /// 错误码提示信息，执行成功为”success”
+    /// 错误码提示信息，执行成功为 success
     /// </summary>
     [JsonProperty("message")]
-    public string Message { get; set; }
+    public string? Message { get; set; } = "success";
     
     /// <summary>
     /// 返回数据，执行失败时为详细出错信息
     /// </summary>
     [JsonProperty("data")]
-    public T Data { get; set; }
+    public T? Data { get; set; }
     
     /// <summary>
     /// Token

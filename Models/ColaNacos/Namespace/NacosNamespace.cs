@@ -8,17 +8,17 @@ public class NacosNamespace
     /// 命名空间ID
     /// </summary>
     [JsonProperty("namespaceId")]
-    public string NamespaceId { get; set; }
+    public string? NamespaceId { get; set; }
     
     /// <summary>
     /// 命名空间名称
     /// </summary>
     [JsonProperty("namespaceName")]
-    public string NamespaceName { get; set; }
+    public string? NamespaceName { get; set; }
     
     /// <summary>
     /// 命名空间描述
     /// </summary>
     [JsonProperty("namespaceDesc")]
-    public string NamespaceDesc { get; set; }
+    public string? NamespaceDesc { get; set; }
 }

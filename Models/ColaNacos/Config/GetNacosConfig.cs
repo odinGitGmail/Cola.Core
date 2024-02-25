@@ -15,14 +15,14 @@ public class GetNacosConfig
     /// </summary>
     [JsonProperty("group")]
     [JsonRequired]
-    public string Group { get; set; }
+    public string? Group { get; set; }
     
     /// <summary>
     /// 配置名
     /// </summary>
     [JsonProperty("dataId")]
     [JsonRequired]
-    public string DataId { get; set; }
+    public string? DataId { get; set; }
     
     /// <summary>
     /// 标签

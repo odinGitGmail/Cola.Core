@@ -3,9 +3,11 @@
 #### 1. 配置文件配置
 
 ```json
-"ColaSnowFlake": {
-  "DatacenterId": 1,
-  "WorkerId": 1
+{
+  "ColaSnowFlake": {
+    "DatacenterId": 1,
+    "WorkerId": 1
+  }
 }
 ```
 

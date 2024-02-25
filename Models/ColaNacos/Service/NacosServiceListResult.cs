@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Cola.Core.Models.ColaNacos.Namespace.Service;
+namespace Cola.Core.Models.ColaNacos.Service;
 
 public class NacosServiceListResult
 {
@@ -8,5 +8,5 @@ public class NacosServiceListResult
     public int Count { get; set; }
     
     [JsonProperty("services")]
-    public List<string> Services { get; set; }
+    public List<string>? Services { get; set; }
 }

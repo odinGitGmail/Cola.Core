@@ -17,21 +17,21 @@ public class PublishNacosConfig
     /// </summary>
     [JsonProperty("group")]
     [JsonRequired]
-    public string Group { get; set; }
+    public string? Group { get; set; }
     
     /// <summary>
     /// 配置名
     /// </summary>
     [JsonProperty("dataId")]
     [JsonRequired]
-    public string DataId { get; set; }
-    
+    public string? DataId { get; set; }
+
     /// <summary>
     /// 配置内容
     /// </summary>
     [JsonProperty("content")]
     [JsonRequired]
-    public string Content { get; set; }
+    public string? Content { get; set; } = "{}";
     
     /// <summary>
     /// 标签
@@ -80,7 +80,21 @@ public class PublishNacosConfig
     /// </summary>
     [JsonProperty("type")]
     public string? ConfigType { get; set; }
-    
+
+    private EnumNacosConfigType _enumConfigType;
+    public EnumNacosConfigType EnumConfigType
+    {
+        get
+        {
+            return _enumConfigType;
+        }
+        set
+        {
+            _enumConfigType = value;
+            ConfigType = value.ToString();
+        }
+    }
+
     /// <summary>
     /// schema
     /// </summary>

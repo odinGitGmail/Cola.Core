@@ -12,6 +12,13 @@ namespace Cola.Core.ColaSnowFlake;
 
 public  static class ColaSnowFlakeinject
 {
+    public static IServiceCollection AddColaSnowFlake(
+        this IServiceCollection services,
+        Action<SnowFlakeConfigOption> action)
+    {
+        return AddSingletonSnowFlake(services, action);
+    }
+
     /// <summary>
     /// AddColaJwt
     /// </summary>
@@ -37,6 +44,12 @@ public  static class ColaSnowFlakeinject
         }));
     }
     
+    public static IServiceCollection AddColaSnowFlake(
+        this IServiceCollection services,
+        IConfiguration config)
+    {
+        return AddSingletonSnowFlake(services, config);
+    }
     /// <summary>
     /// AddColaJwt
     /// </summary>

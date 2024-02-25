@@ -10,7 +10,7 @@ public class TokenUserInfo
     {
     }
 
-    public TokenUserInfo(string currentLoginName, string currentUserId, string currentUserName)
+    public TokenUserInfo(string? currentLoginName, string? currentUserId, string? currentUserName)
     {
         CurrentLoginName = currentLoginName;
         CurrentUserId = currentUserId;
@@ -20,14 +20,14 @@ public class TokenUserInfo
     /// <summary>
     /// CurrentLoginName
     /// </summary>
-    public string CurrentLoginName { get; set; }
+    public string? CurrentLoginName { get; set; }
     /// <summary>
     /// CurrentUserId
     /// </summary>
-    public string CurrentUserId { get; set; }
+    public string? CurrentUserId { get; set; }
     /// <summary>
     /// CurrentUserName
     /// </summary>
-    public string CurrentUserName { get; set; }
+    public string? CurrentUserName { get; set; }
 
 }

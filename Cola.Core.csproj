@@ -40,5 +40,8 @@
     <ItemGroup>
       <ProjectReference Include="..\Cola.CoreUtils\Cola.CoreUtils.csproj" />
     </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Models\ColaSignalR\" />
+    </ItemGroup>
 
 </Project>

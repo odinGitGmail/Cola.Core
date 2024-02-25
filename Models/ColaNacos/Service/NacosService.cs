@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
-namespace Cola.Core.Models.ColaNacos.Namespace.Service;
+namespace Cola.Core.Models.ColaNacos.Service;
 
 public class NacosService
 {
@@ -22,5 +22,5 @@ public class NacosService
     /// </summary>
     [JsonProperty("serviceName")]
     [Required]
-    public string ServiceName { get; set; }
+    public string? ServiceName { get; set; }
 }

@@ -7,20 +7,13 @@
 public class ViewModel<T>
 {
     /// <summary>
-    /// ctor ViewModel
-    /// </summary>
-    public ViewModel()
-    {
-        
-    }
-    /// <summary>
     /// 当前页标
     /// </summary>
     public int TotalCount { get; set; } = 1;
     /// <summary>
     /// 当前页标
     /// </summary>
-    public int CurrnetPage { get; set; } = 1;
+    public int CurrentPage { get; set; } = 1;
     /// <summary>
     /// 总页数
     /// </summary>
@@ -33,5 +26,5 @@ public class ViewModel<T>
     /// <summary>
     /// 返回数据
     /// </summary>
-    public List<T> Data { get; set; }
+    public List<T>? Data { get; set; }
 }

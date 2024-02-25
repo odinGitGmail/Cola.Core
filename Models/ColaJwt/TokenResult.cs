@@ -2,7 +2,7 @@
 
 public class TokenResult
 {
-    public AccessToken Token { get; set; }
+    public AccessToken? Token { get; set; }
     
-    public RefreshToken RefreshToken { get; set; }
+    public RefreshToken? RefreshToken { get; set; }
 }

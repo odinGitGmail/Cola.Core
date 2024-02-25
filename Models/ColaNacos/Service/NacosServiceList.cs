@@ -1,7 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
-namespace Cola.Core.Models.ColaNacos.Namespace.Service;
+namespace Cola.Core.Models.ColaNacos.Service;
 
 public class NacosServiceList
 {

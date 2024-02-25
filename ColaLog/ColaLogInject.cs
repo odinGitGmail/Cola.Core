@@ -12,6 +12,13 @@ namespace Cola.Core.ColaLog;
 /// </summary>
 public static class ColaLogInject
 {
+    public static IServiceCollection AddColaLogs(
+        this IServiceCollection services,
+        IConfiguration config)
+    {
+        return AddSingletonColaLogs(services, config);
+    }
+
     public static IServiceCollection AddSingletonColaLogs(
         this IServiceCollection services,
         IConfiguration config)
@@ -22,6 +29,13 @@ public static class ColaLogInject
         services.AddSingleton<IColaLogs>(provider => new ColaLogs(opts, services));
         ConsoleHelper.WriteInfo("注入类型【 IColaLogs, ColaLogs 】");
         return services;
+    }
+    
+    public static IServiceCollection AddColaLogs(
+        this IServiceCollection services,
+        Action<LogConfigOption> action)
+    {
+        return AddSingletonColaLogs(services, action);
     }
 
     public static IServiceCollection AddSingletonColaLogs(

@@ -33,7 +33,7 @@ public class ColaSnowFlake : IColaSnowFlake
 
     // 生成序列的掩码，这里为4095 (0b111111111111=0xfff=4095)
     private const long SequenceMask = -1L ^ (-1L << SequenceBits);
-    private static Dictionary<long, long> _dicContainer;
+    private static Dictionary<long, long>? _dicContainer;
 
     private static readonly DateTime Jan1St1970 = new(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 

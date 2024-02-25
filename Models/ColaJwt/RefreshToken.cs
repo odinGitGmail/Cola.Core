@@ -3,11 +3,11 @@
 namespace Cola.Core.Models.ColaJwt;
 public class RefreshToken
 {
-    public string TokenId { get; set; }
+    public string? TokenId { get; set; }
 
-    public string JwtId { get; set; }
+    public string? JwtId { get; set; }
 
-    public string Token { get; set; }
+    public string? Token { get; set; }
 
     /// <summary>
     /// 是否使用，一个RefreshToken只能使用一次

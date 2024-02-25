@@ -2,5 +2,5 @@
 
 public class ColaCorsOption
 {
-    public List<CorsOptions> Cors { get; set; }
+    public List<CorsOptions>? Cors { get; set; }
 }
