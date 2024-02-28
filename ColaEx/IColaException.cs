@@ -1,6 +1,6 @@
 ﻿using Cola.CoreUtils.Enums;
 
-namespace Cola.Core.ColaException;
+namespace Cola.Core.ColaEx;
 
 public interface IColaException
 {

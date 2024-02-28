@@ -1,7 +1,7 @@
 ﻿using Cola.Core.ColaConsole;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Cola.Core.ColaException;
+namespace Cola.Core.ColaEx;
 
 public static class ColaExceptionInject
 {

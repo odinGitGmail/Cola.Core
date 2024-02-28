@@ -2,7 +2,7 @@
 using Cola.CoreUtils.Enums;
 using Cola.CoreUtils.Extensions;
 
-namespace Cola.Core.ColaException;
+namespace Cola.Core.ColaEx;
 
 
 public class ColaException : IColaException
